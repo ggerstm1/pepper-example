@@ -1,0 +1,351 @@
+:root {
+    --container-width: 1128px;
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --container-width: 90vw;
+    }
+}
+
+
+/* =============================
+        HERO STYLES DESKTOP
+   ============================*/
+
+
+section#hero {
+    position: relative;
+    overflow-y: hidden;
+    padding-bottom: 7em;
+}
+
+main #hero::after {
+    content: '';
+    background-image: url('images/index/header-background-desktop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right:0;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.hero-container {
+    display: flex;
+    max-width: var(--container-width);
+    margin:0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5em 2em
+}
+
+#screen-images img {
+    max-width: 415px;
+    width: 100%;
+}
+
+
+#form{
+    display: flex;
+}
+
+.email-field-group {
+    width: 65%;
+}
+
+#hero input[type="email"] {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    box-shadow: none;
+    font-family: 'AccordWb','Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 10px;
+    margin: 0;
+    padding: .5em 0 .5em 1em;
+    width: calc(100% - 2em);
+}
+
+#hero button {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    box-shadow: none;
+    font-family: 'AccordWb','Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 10px;
+    margin: 0;
+    padding: .5em 1em;
+    width: 100%
+}
+
+/* ===============================
+       END HERO STYLES DESKTOP
+   =============================== */
+
+
+/* ===============================================
+        EVERY CHEF DESERVES AN AUDIENCE DESKTOP
+  ================================================ */
+section#audience{
+    background-color: #fafafa;
+}
+
+section > div{
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 3em;
+
+}
+
+#audience h2,
+#audience h4{
+    text-align: center;
+}
+
+.layout-3col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3em 0 0 0;
+
+}
+
+.layout-3col>.col {
+    max-width: 26%;
+    min-width: 240px;
+}
+
+.tile {
+   background: #fff;
+   border-radius: 4px;
+   box-shadow: 0 0 20px rgba(108, 158, 215, .15);
+   margin-bottom: 1.25em;
+   padding: 2.5em 1.5em 6em;
+}
+
+#audience img {
+    width:53px;
+    height: 53px;
+}
+/* ======================================================
+        END EVERY CHEF DESERVES AN AUDIENCE DESKTOP
+  ======================================================= */
+
+
+/* ===========================
+       COMING SOON DESKTOP
+  ============================ */
+
+#coming-soon 
+h2,
+#coming-soon 
+h4 {
+    text-align: center;
+    color: #fff;
+}
+
+section#coming-soon {
+    background: #343434;
+    position: relative;
+    overflow: hidden;
+}
+
+#coming-soon::after{
+    content: '';
+    background-image: url('images/index/pepper-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 430px;
+    width: 430px;
+    transform: translateY(-90px);
+    right:0;
+    top: 0;
+}
+/* =============================
+      END COMING SOON DESKTOP
+  ============================== */
+
+
+
+/* ===========================================
+                    TABLET
+  ============================================ */
+@media screen and (max-width: 977px) and (min-width: 551px) {
+
+
+    section#hero {
+        padding: 0;
+    }
+
+    .hero-container{
+        flex-direction: column;
+    }
+
+    
+    main #hero::after {
+        content: '';
+        background: url(images/index/header-background-mobile.png) center no-repeat;
+        background-size: contain;
+        display: block;
+        top: 0;
+        left: 0;
+        background-position: bottom;
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+        transform: translateY(12%);
+        position: absolute;
+        z-index: -2;
+}
+
+#screen-images img {
+    margin: 4em 0 0 0;
+    max-width: 70vw;
+}
+
+
+
+/*every chef deserves an audience*/
+
+section > div {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+.layout-3col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.layout-3col>.col {
+    max-width: 100%;
+    margin-bottom:2em;
+}
+
+.tile {
+    padding: 2em;
+}
+
+
+/* ===========================
+       FOOTER TABLET
+  ============================ */
+
+
+
+}
+
+
+/* =============================
+            END TABLET
+  ============================== */
+
+
+
+
+/* =============================
+              MOBILE
+  ============================== */
+
+@media (max-width: 550px) {
+
+
+
+    section > div {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 2em;
+    }
+    section#hero {
+        padding: 0;
+    }
+    main #hero::after {
+        content: '';
+        background: url(images/index/header-background-mobile.png) center no-repeat;
+        background-size: contain;
+        display: block;
+        top: 0;
+        left: 0;
+        background-position: bottom;
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+        transform: translateY(0%);
+        position: absolute;
+        z-index: -2;
+    }
+    
+    .hero-container{
+        flex-direction: column;
+    }
+
+    #screen-images img {
+        margin: 3em 0 0 0;
+        max-width: 80vw;
+    }
+
+    h1 {
+        max-width: 100%;
+    }
+
+    #hero input[type="email"] {
+        width: calc(100% - .5em);
+    }
+    #form {
+        flex-direction: column;
+    }
+    .email-field-group {
+        width: calc(100% - .5em)
+    }
+    #hero button {
+        width: calc(100% - 2em);
+    }
+    #submit {
+        margin-top: 1em;
+    }
+
+
+    /*every chef has an audence*/
+
+    .layout-3col > .col {
+        max-width: 100%;
+    }
+
+    .tile {
+        padding: 2em 2.2em;
+     }
+
+     #coming-soon::after {
+         right: -170px;
+     }
+
+
+
+
+
+/* =============================
+            END MOBILE
+  ============================== */
+
+
+  @media (max-width: 360px) {
+    section > div {
+        padding: 0 1em;
+    }
+    .tile {
+        padding: 2em 1em;
+    }
+  }
