@@ -47,13 +47,21 @@
                 </div>
 
                 <!-- Sample HTML Form -->
-                <form action="contact.php" method="post">
+                <!-- modify this form HTML and place wherever you want your form -->
 
-                    <label>Email Address</label>
-                    <input type="text" name="email_address" size="40">
+                <form action="https://formspree.io/f/xgepddjv" method="POST">
+                    <label>
+                        Your email:
+                        <input type="text" name="_replyto">
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message"></textarea>
+                    </label>
 
-                    <input type="submit" name="send" value="Submit">
+                    <!-- your other form fields go here -->
 
+                    <button type="submit">Send</button>
                 </form>
                 <!-- Simple HTML Form that “Triggers” an Email.-->
                 <!--end form test-->
